@@ -24,11 +24,11 @@ Requirements
 3. Connect the UR5 controller to the host machine using an ethernet cable. 
 4. Assign a static address, in our case, 192.168.0.77 . Assign the same along with port number as 500002, in the external control program in the teach pendant.
 5. Run the external control program.
-6. Run the following command, wherein tool_device_name refers to the robotiq gripper's name.  roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.100 tool_device_name:=/tmp/ttyUR
+6. Run the following command, wherein tool_device_name refers to the robotiq gripper's name.  `roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.100 tool_device_name:=/tmp/ttyUR`
 
 
 # Step 3 - Inverse Kinematics Code
-As the python file, ur5_inv_py has inverse kinematics for UR5 coded, in Newton Raphson Method, you would be required to add the home configurations, screw matrices, the end effector pose in the code. 
+Add the python file from this repo into your workspace. As the python file, ur5_inv_py has inverse kinematics for UR5 coded, in Newton Raphson Method, you would be required to add the home configurations, screw matrices, the end effector pose in the code. 
 
 # Step 4 - Validation of inverse kinematics using Forward Kinematics
 Using the topic that the robot subscribes to, /scaled_pos_joint_traj_controller/command trajectory_msgs/JointTrajectory, you can easily try to move the robot by publishing the joint values from the terminal. 
@@ -39,8 +39,8 @@ The above images shows successful validation of the inverse kinematics mode, by 
 
 # Step 6 - Gripper Control
 
-1. Activate gripper control using the command- rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /tmp/ttyUR
-2. Open the gripper Ui using the command - rosrun robotiq_2f_gripper_control Robotiq2FGripperSimpleController.py
+1. Activate gripper control using the command- `rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /tmp/ttyUR`
+2. Open the gripper Ui using the command - `rosrun robotiq_2f_gripper_control Robotiq2FGripperSimpleController.py`
 
 Given below are the images that showed point to point pick and place using Inverse Kinematics Solutions. 
 
