@@ -22,7 +22,7 @@ Requirements
 1. Install the External_Control Program in UR5 Teach Pendant. Further details have been provided [here](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver/blob/master/ur_robot_driver/doc/install_urcap_e_series.md)
 2. Set the IP address of the robot as 192.168.0.100 in the teach pendant. 
 3. Connect the UR5 controller to the host machine using an ethernet cable. 
-4. Assign a static address, in our case, 192.168.0.77 . Assign the same along with port number as 500002, in the external control program in the teach pendant.
+4. Assign a static address, in our case, 192.168.0.77 . Assign the same along with port number as 50002, in the external control program in the teach pendant.
 5. Run the external control program.
 6. Run the following command, wherein tool_device_name refers to the robotiq gripper's name.  `roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.0.100 tool_device_name:=/tmp/ttyUR`
 
